@@ -170,3 +170,60 @@ section.content.author h1{
     font-weight: 250;
     color: whitesmoke;
 }
+
+section.content.books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    background-image: url('./images/book-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    border-radius: 10px;
+    padding: 0 100px;
+}
+
+.book-text {
+    flex: 1;
+    max-width: 55vw;
+    color: var(--darkCharcoal--color);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.9);
+}
+
+.book-text h2 {
+    margin-top: -10%;
+    font-size: 3.5vw; /* Increase font size */
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.book-text p {
+    font-size: 18px; /* Increase font size */
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px;
+    max-width: 90%;
+
+}
+
+.book-mockup {
+    flex: 1;
+    text-align: center;
+    max-width: 30%; /* Adjust the size of the image */
+    margin-right: 50px;
+}
+
+.book-mockup img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
