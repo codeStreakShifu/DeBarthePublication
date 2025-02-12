@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Color */
+   --gold--color: #C9A227;
+   --deepNavy--color: #1E3A5F;
+
+   /* Secondary Color */
+   --warmBeige--color: #F5E8C7;
+   --richBurgundy--color: #6E110A;
+
+   /* Neutral Colors */
+   --offWhite--color: #FAF9F6;
+   --darkCharcoal--color: #2D2D2D;
+
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width:  100%;
+    z-index: 100; /* Ensure the header is above other content */
+}
+
+nav {
+    background: rgba(193, 220, 237, 0.2);
+    backdrop-filter: blur(3px);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 10vw;
+    transition: all 0.4s ease-in-out;
+}
+
+label.logo {
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 3vw;
+    color: var(--darkCharcoal--color);
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+label.logo:hover {
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1); /* Scale to 1.2 on hover */
+}
+
+.hamburger {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #2e3636;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--deepNavy--color);
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(63, 61, 61); /* Set the color to white */
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+footer {
+
+    width: 100%;
+    background-color: var(--deepNavy--color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  
+}
+
+footer a:hover {
+    color: #3498db;
+}
+
+footer .social-icons a {
+    font-size: 24px;    
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #1da1f2; 
+}
+
+footer .social-icons .fa-facebook:hover {
+    color: #3b5998; 
+}
+
+footer .social-icons .fa-youtube:hover {
+    color: #3b20b4; 
+}

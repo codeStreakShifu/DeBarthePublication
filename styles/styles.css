@@ -1,0 +1,172 @@
+:root {
+    /* Primary Color */
+   --gold--color: #C9A227;
+   --deepNavy--color: #1E3A5F;
+
+   /* Secondary Color */
+   --warmBeige--color: #F5E8C7;
+   --richBurgundy--color: #6E110A;
+
+   /* Neutral Colors */
+   --offWhite--color: #FAF9F6;
+   --darkCharcoal--color: #2D2D2D;
+
+}
+
+section{
+    min-height: 100vh;
+    max-width: 100%;
+    letter-spacing: 0.1em;
+    padding: 0 200px;
+    font-family: 'Playfair Display', serif;
+}
+
+section.content.homepage {
+    padding: 290px 0;
+    background-image: url('./images/homepage-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center content vertically */
+    padding-right: 100px; /* Add padding to the right */
+}
+
+.hero {
+    display: inline-block; /* Ensure the hero section does not take full width */
+    text-align: center; /* Center text inside hero */
+    width: 50vw; /* Take up half of the section */
+    margin-right: 0; /* Remove any right margin */
+    
+}
+
+.hero h1 {
+    color: var(--darkCharcoal--color);
+    margin-top: -90px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+    text-align: center; /* Center the h1 element */
+    font-size: 3.9vw;
+    font-weight: bolder;
+    
+}
+
+.hero p{
+    font-size: 1.7vw;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    line-height: 1.5em;
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+section.content.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 75px;
+    background-image: url('./images/auth-img-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+section.content.author h1{
+    display: none;
+}
+
+.about-author {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+.profile-image {
+    flex: 2;
+    margin-left: 50px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-image p{
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    background-color: rgb(211, 211, 216);
+    border-radius: 10px;
+}
+
+.profile-image img {
+    margin-top: 5rem;
+    height: 40%;
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: -14px 5px 12px rgba(0, 0, 0, 0.2); /* Add shadow to the image */
+}
+
+.prof-image{
+    display: none;
+}
+.author-text {
+    max-width: 100vw;
+    flex: 2;
+    color: var(--offWhite--color); /* Change text color to white smoke */
+}
+
+.author-text h2 {
+    width: 110%;
+    display: block;
+    font-size: 3.5vw; /* Increase font size */
+    margin-bottom: 30px;
+    color: var(--offWhite--color); /* Change text color to white smoke */
+    text-shadow: 2px 2px 10px rgba(7, 3, 3, 0.9);
+    
+}
+
+.author-text p {
+    width: 100%;
+    font-size: 18px; /* Increase font size */
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--offWhite--color); /* Change text color to white smoke */
+    margin-bottom: 50px;
+}
+
+.author-but {
+    display: inline-block;
+    background-color: rgb(52, 6, 1); /* Green background */
+    color: #eef6ff; /* White text */
+    padding: 10px 20px; /* Padding for button size */
+    border-radius: 5px;
+    letter-spacing: 0.2em;
+    font-weight: 250;
+    text-decoration: none;
+    font-size: medium;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+.author-but:hover {
+    background-color: #6e110a;
+    padding: 10px 20px;
+    font-weight: 250;
+    color: whitesmoke;
+}
