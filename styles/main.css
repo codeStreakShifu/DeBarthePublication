@@ -51,7 +51,7 @@ label.logo {
     
     font-family: 'Playfair Display', serif;
     font-size: 3vw;
-    color: var(--darkCharcoal--color);
+    color: rgb(129, 40, 5);
     font-weight: bolder;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
@@ -77,8 +77,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #2e3636;
-    font-size: 18px;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 0.2em;
+    color: #c7591a;
+    font-size: 19px;
+    font-weight: 600;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }

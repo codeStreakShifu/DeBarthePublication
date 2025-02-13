@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Dean DeBarthe</title>
+
+    <!-- External Stylesheets -->
+
+    <link rel="stylesheet" href="./styles/test.css">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome & Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <label class="logo">Joseph Dean DeBarthe</label>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="author.html">Author</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+        </nav>             
+    </header>
+
+    <!-- Hero Section -->
+    <section class="content homepage">
+        <div class="hero" data-aos="fade-down" data-aos-duration="1500">
+            <h1 class="hero-title">GOD LOVES ALL OF US</h1>
+            <div class="hero-text">
+              <p>He wants all of us to join Him in heaven, but we must accept His guidance and all of His scripture. 
+                This includes the Bible and the Book of Mormon, a second testimony that He is the Messiah, the Son of God.</p>
+              <a href="author.html" class="author-but" data-aos="fade-up" data-aos-duration="1300">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Author -->
+    <section class="content author">
+        <h1 data-aos="fade-down" data-aos-duration="1300">ABOUT THE AUTHOR</h1>
+        <div class="about-author">         
+            <div class="author-text">
+                <h2 data-aos="fade-down" data-aos-duration="1300">ABOUT THE AUTHOR</h2>
+                <p data-aos="fade-left" data-aos-duration="1500">
+                    Joseph Dean DeBarthe is a fourth-generation member of the Reorganized Church of Jesus Christ of Latter Day Saints, or Community of Christ...
+                </p>          
+            </div>
+
+            <div class="profile-image" data-aos="fade-right" data-aos-duration="1500">
+                <img src="./styles/images/prof-img.jpg" alt="Author Image" loading="lazy">
+            </div>
+        </div>
+        <a href="author.html" class="author-but" data-aos="fade-up" data-aos-duration="1000">Know more about Joseph</a>
+    </section>
+
+    <!-- About the Book -->
+    <section class="content books">
+        <div class="about-book">
+            <div class="book-mockup">
+                <img src="./styles/images/book-cover/mockup.jpg" alt="Book Cover" data-aos="fade-left" data-aos-duration="1000" loading="lazy">
+                <a href="books.html" class="author-but" data-aos="fade-up" data-aos-duration="1300">Read More</a>
+            </div>
+            <div class="book-text">
+                <h2 data-aos="fade-down" data-aos-duration="1000">ABOUT THE BOOK</h2>
+                <p data-aos="fade-left" data-aos-duration="1000">
+                    Inside my book, you will discover and comprehend the concept referred to as THE CODE OF SILENCE...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Joseph Dean DeBarthe. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:email@example.com">Joseph Dean DeBarthe</a></p>
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <p>Follow us on:
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </p>
+        </div>
+
+        <div class="seaamos">
+            <h4>Created by Sea Amos - Designer Joseph</h4>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./styles/scripts.js"></script>
+    
+    <script>
+        // Initialize AOS Animations
+        AOS.init();
+
+        // Smooth Navigation Toggle
+        document.querySelector('.checkbtn').addEventListener('click', function() {
+            let nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        });
+
+        // Parallax Effect for Title
+        document.addEventListener("mousemove", function(event) {
+            let x = (window.innerWidth / 2 - event.clientX) / 25;
+            let y = (window.innerHeight / 2 - event.clientY) / 25;
+            document.querySelector(".hero-title").style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+
+        // Floating Animation for Title
+        setInterval(() => {
+            let title = document.querySelector(".hero-title");
+            title.style.transform += " translateY(-5px)";
+            setTimeout(() => {
+                title.style.transform += " translateY(5px)";
+            }, 750);
+        }, 1500);
+    </script>
+
+</body>
+</html>
