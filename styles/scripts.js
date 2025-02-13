@@ -58,5 +58,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let angle = 0;
+        const gallery = document.getElementById("gallery");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        let images = Array.from(gallery.getElementsByTagName("img"));
+        let stepAngle = 360 / images.length;
+    
+        function updateGallery() {
+            stepAngle = 360 / images.length;
+            images.forEach((img, index) => {
+                img.style.transform = `rotateY(${index * stepAngle}deg) translateZ(300px)`;
+            });
+        }
+    
+        function rotateGallery(deg) {
+            angle += deg;
+            gallery.style.transform = `rotateY(${angle}deg)`;
+        }
+    
+        prevBtn.addEventListener("click", () => rotateGallery(-stepAngle));
+        nextBtn.addEventListener("click", () => rotateGallery(stepAngle));
+    
+        updateGallery();
+    });
+
 });
   
