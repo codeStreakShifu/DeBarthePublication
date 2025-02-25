@@ -50,12 +50,12 @@ nav {
 label.logo {
     
     font-family: 'Playfair Display', serif;
-    font-size: 3vw;
-    color: rgb(129, 40, 5);
+    font-size: 2.5vw;
+    color: #E0C9A6;
     font-weight: bolder;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     transition: transform 0.3s ease; /* Add transition for smooth scaling */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 label.logo:hover {
@@ -73,21 +73,21 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 12px;
+    margin: 0 8px;
 }
 
 nav ul li a {
-    font-family: "Bebas Neue", serif;
+    font-family: "Anton", serif;
     letter-spacing: 0.2em;
-    color: #c7591a;
+    color: #FFF;
     font-size: 19px;
-    font-weight: 600;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: var(--deepNavy--color);
+    color: #E0C9A6;
 }
 
 .checkbtn {

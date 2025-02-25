@@ -89,7 +89,7 @@ section.content.homepage {
 /* Button Hover Effects */
 .author-but {
     display: inline-block;
-    background-color: rgb(52, 6, 1);
+    background-color: #4B2E1E;
     color: #eef6ff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -99,6 +99,7 @@ section.content.homepage {
     font-size: medium;
     margin-top: 20px;
     transition: all 0.3s ease-in-out;
+    border: 1px #eef6ff;
 }
 
 .author-but:hover {
