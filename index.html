@@ -3,111 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Dean DeBarthe</title>
-    <link rel="stylesheet" href="./styles/mediaquery.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" >
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
 
+    <style>
+        *, html, body{
+            inset: 0;
+            margin: 0;
+        }
+
+        body{
+            overflow-x: hidden;
+            letter-spacing: 1.4px;
+        }
+
+        main{
+            position: relative;
+            margin: 0;
+            max-width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to top, #ffa99f30 10%, rgba(0,0,0,0) 60%),  url('./bg.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            
+        }
+        header{
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 2rem 10%;
+            background: rgba(255, 254, 204, 0.05);
+            backdrop-filter: blur(3px);
+            max-height: 3rem;
+            max-width: 100vw;
+            font-weight: 500;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: max(12px, 1.7vw);
+            flex: 1;
+        }
+
+
+        .logo-name{
+            
+            font-size: max(18px, 2.5vw);
+            
+            filter: contrast(180%);
+            font-family: "Bowlby One SC", sans-serif;
+            color: whitesmoke;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
+               -2px -2px 5px rgba(0, 0, 0, 0.867);
+        }
+
+        nav{
+            position: relative;
+        }
+        .logo-image img{
+
+            position: relative;
+            width: 6.8vw;
+            height: auto;
+        }
+
+        nav ul{
+            position: relative;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            
+        }
+        nav li{
+            position: relative;
+            color: whitesmoke;
+            
+        }
+
+        nav a:hover, .active{
+            color: white;
+            background-color: #4d0000;
+        }
+
+
+        ul li a{
+            padding: 9px;
+            text-decoration: none;
+            color: rgb(218, 213, 213);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
+               -2px -2px 5px rgba(0, 0, 0, 0.867);
+            transition: all 1s ease-in-out;
+            font-weight: 400; 
+            border-radius: 3px;
+        }
+
+        /* ul li a:hover{
+            color: #ffffff;
+            background-color: rgb(91, 15, 0);
+            filter: drop-shadow(3px 3px 5px rgb(0, 0, 0));
+            transition: all 0.7s ease-in-out;
+        }
+
+        .active{
+            color: rgb(16, 11, 0);
+        } */
+
+        .intro{
+           margin: 0 10%; 
+        }
+
+        .intro .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Sarpanch", sans-serif;
+            font-weight: 700;
+            justify-content: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
+               -2px -2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            
+        }
+
+
+        .text h1{
+            margin-top: 130px;
+            font-family: "Bowlby One SC", sans-serif;
+            letter-spacing: 5px;
+            color: whitesmoke;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.847);
+            text-align: center;
+            font-size: max(24px, 3.5vw);
+
+        }
+
+        .text p{
+
+            font-size: max(18px, 2vw);
+            margin: 30px 7vw;
+            color: aliceblue;
+            text-align: justify;
+        }
+
+        .text a{
+            text-decoration: none;
+            padding: 18px;
+            font-size: max(16px, 1.3vw);
+            color: rgba(255, 255, 255);
+            border-radius: 5px;
+            background-color: rgb(109, 104, 98);
+            filter: drop-shadow(8px 8px 10px rgb(164, 164, 164));
+            /* box-shadow: 5px 5px 5px rgba(9, 5, 5, 0.8); */
+            transition: all 1s ease-in-out;
+        }
+
+        .text a:hover{
+            transition: all 1s ease-in-out;
+            background-color: rgb(123, 79, 29);
+            transform: scale(1.1);
+            
+        }
+
+
+
+        .about-book{
+            background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 100%), url('./book-bg.jpg');   
+            background-size: cover;
+            background-position: center;
+            max-width: 100vw;
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        .about-book h2{
+            font-size: max(16px, 3.3vw);
+            font-family: "Bowlby One SC", sans-serif;
+            margin-bottom: 30px;
+            color: #b29564;
+            filter: contrast(150%);
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.867), 
+               -2px -2px 5px rgba(255, 255, 255, 0.867);
+            transition: all 1s ease-in-out;
+            font-weight: 400; 
+        }
+
+        .content-book {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10%;
+        }
+
+        .about-book-text {
+            max-width: 50%;
+            text-align: justify;
+        }
+
+        .hero-image img{
+            width: 80%;
+            height: auto;
+        }
+
+        .about-book-text .title-p{
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            text-shadow: 2px 2px 5px rgba(255, 237, 237, 0.867), 
+               -2px -2px 5px rgba(255, 240, 240, 0.867);
+            font-size: max(16px, 2vw);
+            font-style: normal;
+        }
+
+        .about-book-text h1 {
+            margin-top: 24px;
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .about-book p {
+        font-size: 24px;
+
+        color: #555;
+        line-height: 1.6;
+        margin: auto;
+        text-align: justify;
+        }
+
+        .about-author {
+            background: linear-gradient(to right, #f8f9fa 40%, #ffde71 100%);
+            max-width: 100vw;
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        .author-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2vw;
+        }
+
+        .author-image {
+            width: 40vw;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .author-content {
+        text-align: left;
+        }
+
+        .author-content h2 {
+            font-family: "Bowlby One SC", sans-serif;
+            font-size: 3vw;
+            color: #3d2f16;
+            text-shadow: 2px 2px 5px rgba(228, 228, 228, 0.867), 
+               -2px -2px 5px rgba(230, 230, 230, 0.867);
+               letter-spacing: 5px;
+               margin-bottom: 70px;
+        }
+
+
+
+        .explore-button {
+            font-size: 2.2vw;
+        padding: 10px 20px;
+        background: #7a4333;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+        }
+
+        .explore-button:hover {
+        background: #4d0000;
+        }
+
+        footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+/* Creator Section */
+.seaamos {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.seaamos h4 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+
+
+    </style>
 </head>
-
 <body>
+    <main>
+        <header>
 
-    <header>
-        <nav>
+            <div class="logo-image">
+                <img src="./logo.PNG" alt="">
+            </div>
 
-            <label for="" class="logo">Joseph Dean DeBarthe</label>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
+            <div class="logo-name">Joseph Dean DeBarthe</div>
             
-            <ul>
-                
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="author.html">Author</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blogs</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Books</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </div> <!-- Hamburger icon -->
-
-        </nav>             
-    </header>
-
-    <section class="content homepage">
-
-        <div class="mormon-logo">
+        <div class="intro">
+            <div class="text">
+                <h1>GOD LOVES ALL OF US</h1>
+                <p>He wants all of us to join him in heaven, but we must accept His guidance and all of his scripture. This includes the Bible and the Book of Mormon, a second testimony that He is the Mesiah, the son of God.</p>
+                <a href="">Unlock the Truth</a>
+            </div>
+            
             
         </div>
-
-        <div class="hero" data-aos="fade-down" data-aos-duration="1500">
-            <h1 >GOD LOVES ALL OF US</h1>
-            <div class="hero-text">
-              <p>He wants all of us to join him in heaven, but we must accept His guidance and all of his scripture. 
-                This includes the Bible and the Book of Mormon, a second testimony that He is the Mesiah, the son of God.</p>
-                    <a href="author.html" class="author-but" data-aos="fade-up" data-aos-duration="1300">Explore</a>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="content author">
-
-        <h1 data-aos="fade-down" data-aos-duration="1300">ABOUT THE AUTHOR</h1>
-
-        <div class="about-author">         
-            <div class="author-text">
-                <h2 data-aos="fade-down" data-aos-duration="1300">ABOUT THE AUTHOR</h2>
-                <p data-aos="fade-left" data-aos-duration="1500">Joseph Dean DeBarthe is a fourth-generation member of the Reorganized Church of Jesus Christ of Latter Day Saints, or Community of Christ. He has a Bachelor’s Degree in Business Management and Computer Information Systems from Central State University, Warrensburg Mo. Mr. DeBarthe served in the U.S. Navy for eight years nine months and worked as a civilian member of the military for twenty-three years. He retired from government service in 2008. During his employment, Mr. DeBarthe lived in Germany for three years. He travelled throughout Europe Including the following countries: Germany, Holland, The Netherlands France, Spain, Austria, Sweden, Italy and Czechoslovakia. While in the Navy he visited Japan, Korea, The Philippines, Guam and the North Pole. He also visited many Central American countries including Honduras, Mexico, Guatemala and Costa Rica. He currently lives in Independence, Missouri, with his wife, Maria, who is a Registered Nurse of Mayan descent.</p>          
-            </div>
-
-            <div class="profile-image" data-aos-delay="0" data-aos="fade-right" data-aos-duration="1500">
-                <img src="./styles/images/prof-img.jpg" alt="">
-                
-            </div>
-
-            <!-- <div class="prof-image"  data-aos-delay="0" data-aos="fade-right" data-aos-duration="1500">
-                <img src="./styles/images/author-image.jpeg" alt="">
-                <p>Author Joseph Dean DeBarthe</p>
-            </div> -->
-        </div>
-
-        <a href="author.html" class="author-but" data-aos="fade-up" data-aos-duration="1000">Know more about Joseph</a>
-    </section>
-
-    <section class="content books">
         
-        <div class="about-book">
-            <div class="book-mockup">
-                <img src="./styles/images/book-cover/mockup.jpg" alt="" data-aos-delay="0" data-aos="fade-left" data-aos-duration="1000">
-                <a href="books.html" class="author-but" data-aos="fade-up" data-aos-duration="1300">Read More</a>
-            </div>
-            <!-- <h1 data-aos="fade-down" data-aos-duration="1000">ABOUT THE BOOK</h1> -->
-            <div class="book-text">
-                <h2 data-aos="fade-down" data-aos-duration="1000">ABOUT THE BOOK</h2>
-                <p data-aos="fade-left" data-aos-duration="1000">What about the Book of Mormon? That it is a controversial book cannot be denied. Many do not accept it as scripture. They believe that Joseph Smith, Jr., "wrote" it. They also believe that the Bible is the only scripture ever written, but nowhere does the Bible make that claim. This belief is not biblical. In fact, just the opposite is true. The Bible testifies to the existence of other written scriptures and specifically a second scripture written about the tribe of Joseph (Ezekiel 37:19). This Joseph is the same Joseph of the coat of many colors, the same Joseph sold into slavery in Egypt and the Same Joseph that saved Egypt and all of the tribes of Israel from the seven-year that occurred.</p>
-                
+    </main>
+    
+    <section class="about-book">
+        <h2 data-aos="fade-down" data-aos-duration="1000">ABOUT THE BOOK</h2>
+        <div class="content-book">
+            <div class="about-book-text">
+                <p data-aos="fade-down" data-aos-duration="1500" class="title-p" style="color: #b29564; font-weight: bold;">Best Selling Book</p>
+                <h1 data-aos="fade-right" data-aos-duration="1500">Biblical and Non-Biblical <br>Evidences For The Book of Mormon: That Show Its Validity As Scripture: <br>A Layman's Thesis </h1> <br>
+                <p data-aos="fade-left" data-aos-duration="1000">
+                What about the Book of Mormon? That it is a controversial book cannot be denied. Many do not accept it as scripture. 
+                They believe that Joseph Smith, Jr., "wrote" it. They also believe that the Bible is the only scripture ever written, 
+                but nowhere does the Bible make that claim. This belief is not biblical. In fact, just the opposite is true. The Bible 
+                testifies to the existence of other written scriptures and specifically a second scripture written about the tribe of 
+                Joseph (Ezekiel 37:19). This Joseph is the same Joseph of the coat of many colors, the same Joseph sold into slavery in 
+                Egypt, and the same Joseph that saved Egypt and all of the tribes of Israel from the seven-year famine.
+                </p>
             </div>
 
-            
-            
+            <div data-aos="zoom-in" data-aos-duration="1500" class="hero-image">
+                <img src="./bookcover.png" alt="Book Cover">
+            </div>  
+
         </div>
-    </section>
-    
-    <footer>
+      </section>
+      
+
+      <section class="about-author">
+        <div class="author-container">
+          
+          <div class="author-content">
+            <h2>Discover more about <strong>Joseph Dean DeBarthe</strong></h2>
+            <a href="" class="explore-button">Discover</a>
+          </div>
+        
+          <img src="author.png" alt="Author Name" class="author-image">
+        </div>
+      </section>
+      
+
+      <footer>
         <p>&copy; 2025 Joseph Dean DeBarthe. All rights reserved.</p>
         <p>Contact us at: <a href="mailto:">Joseph Dean DeBarthe</a></p>
         
@@ -131,10 +439,5 @@
         </div>
     </footer>
 
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="./styles/scripts.js"></script>
 </body>
 </html>
