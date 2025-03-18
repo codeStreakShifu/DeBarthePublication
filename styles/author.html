@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image Gallery</title>
+    <link rel="stylesheet" href="./styles/gallery.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+
+            <label for="" class="logo">Joseph Dean DeBarthe</label>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
+            
+            <ul>
+                
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="author.html">Author</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </div> <!-- Hamburger icon -->
+
+        </nav>             
+    </header>
+
+    <section class="gallery-bg">
+    
+        <div class="gallery-container">
+            <div class="gallery" id="gallery">
+                <img src="./styles/images/auth-img-bg.jpg" style="transform: rotateY(0deg) translateZ(300px);">
+                <img src="./styles/images/book-bg.webp" style="transform: rotateY(60deg) translateZ(300px);">
+                <img src="./styles/images/homepage-bg.jpg" style="transform: rotateY(120deg) translateZ(300px);">
+                <img src="./styles/images/homepage-bg1.jpg" style="transform: rotateY(180deg) translateZ(300px);">
+                <img src="./styles/images/prof-img.jpg" style="transform: rotateY(240deg) translateZ(300px);">
+                <img src="./styles/images/book-bg.webp" style="transform: rotateY(300deg) translateZ(300px);">
+            </div>
+            <div class="controls">
+                <button onclick="rotateGallery(60)">&#9664;</button>
+                <button onclick="rotateGallery(-60)">&#9654;</button>
+            </div>
+            
+        </div>
+        <h1>DeBarthe's Works</h1>
+    </section>
+    <section class="author-text">
+        <p>sample text</p>
+    </section>
+    <script>
+        let angle = 0;
+        function rotateGallery(deg) {
+            angle += deg;
+            document.getElementById("gallery").style.transform = `rotateY(${angle}deg)`;
+        }
+    </script>
+</body>
+</html>

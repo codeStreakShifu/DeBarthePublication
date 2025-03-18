@@ -3,66 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Image Gallery</title>
-    <link rel="stylesheet" href="./styles/gallery.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>About the Author</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa 40%, #ffde71 100%);
+        }
+        main{
+            position: relative;
+            margin: 0;
+            max-width: 100vw;
+
+            
+        }
+        header{
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 2rem 10%;
+            background: rgba(116, 98, 76, 0.55);
+            backdrop-filter: blur(3px);
+            max-height: 3rem;
+            max-width: 100vw;
+            font-weight: 500;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: max(12px, 1.5vw);
+            flex: 1;
+        }
+
+
+        .logo-name{
+            
+            font-size: max(18px, 2.8vw);
+            font-family: "Homenaje", sans-serif;
+            filter: contrast(180%);
+            letter-spacing: 4px;
+            font-weight: 1000;
+            color: whitesmoke;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
+               -2px -2px 5px rgba(0, 0, 0, 0.867);
+        }
+
+        nav{
+            position: relative;
+        }
+        .logo-image img{
+
+            position: relative;
+            width: 6.4vw;
+            height: auto;
+        }
+
+        nav ul{
+            position: relative;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            
+        }
+        nav li{
+            position: relative;
+            color: whitesmoke;
+            
+        }
+
+        nav a:hover{
+            color: white;
+            background-color: #4d0000;
+        }
+
+        ul li a{
+            padding: 9px;
+            text-decoration: none;
+            color: rgb(218, 213, 213);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.367), 
+               -2px -2px 5px rgba(0, 0, 0, 0.367);
+            transition: all 1s ease-in-out;
+            font-weight: 400; 
+            border-radius: 6px;
+        }
+
+        .about-author {
+            text-align: center;
+            padding: 60px 10%;
+        }
+        .author-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .author-image {
+            width: 40%;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .author-content {
+            text-align: left;
+            max-width: 50%;
+        }
+        .author-content h2 {
+            font-size: 36px;
+            color: #2b200d;
+            margin-bottom: 20px;
+        }
+        .author-content p {
+            font-size: 24px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+
+        .author-bio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background-color: #f9f9f9;
+    }
+    .bio-content {
+        display: flex;
+        align-items: center;
+        max-width: 80vw;
+        gap: 20px;
+    }
+    .bio-image {
+        max-width: 40vw;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .bio-text {
+        max-width: 60vw;
+    }
+    .bio-text h2 {
+        font-size: 36px;
+        color: #333;
+    }
+    .bio-text p {
+        font-size: 24px;
+        text-align: justify;
+        color: #555;
+        line-height: 1.6;
+    }
+    footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+/* Creator Section */
+.seaamos {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.seaamos h4 {
+  font-weight: normal;
+  font-size: 14px;
+}
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
+    <main>
+        <header>
 
-            <label for="" class="logo">Joseph Dean DeBarthe</label>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
-            
-            <ul>
-                
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="author.html">Author</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blogs</a></li>
-            </ul>
-
-            <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </div> <!-- Hamburger icon -->
-
-        </nav>             
-    </header>
-
-    <section class="gallery-bg">
-    
-        <div class="gallery-container">
-            <div class="gallery" id="gallery">
-                <img src="./styles/images/auth-img-bg.jpg" style="transform: rotateY(0deg) translateZ(300px);">
-                <img src="./styles/images/book-bg.webp" style="transform: rotateY(60deg) translateZ(300px);">
-                <img src="./styles/images/homepage-bg.jpg" style="transform: rotateY(120deg) translateZ(300px);">
-                <img src="./styles/images/homepage-bg1.jpg" style="transform: rotateY(180deg) translateZ(300px);">
-                <img src="./styles/images/prof-img.jpg" style="transform: rotateY(240deg) translateZ(300px);">
-                <img src="./styles/images/book-bg.webp" style="transform: rotateY(300deg) translateZ(300px);">
+            <div class="logo-image" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="./logo.PNG" alt="">
             </div>
-            <div class="controls">
-                <button onclick="rotateGallery(60)">&#9664;</button>
-                <button onclick="rotateGallery(-60)">&#9654;</button>
-            </div>
+
+            <div class="logo-name" data-aos="fade-down" data-aos-duration="2000">Joseph Dean DeBarthe</div>
             
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active" data-aos="fade-in" data-aos-duration="2000">Home</a></li>
+                    <li><a href="author.html" data-aos="fade-in" data-aos-duration="2300">About</a></li>
+                    <li><a href="" data-aos="fade-in" data-aos-duration="2500">Books</a></li>
+                    <li><a href="" data-aos="fade-in" data-aos-duration="2800">Contact</a></li>
+                </ul>
+            </nav>
+        </header>   
+        
+    </main>
+    <section class="about-author">
+        <div class="author-container">
+            <div class="author-content">
+                <h2>About Joseph Dean DeBarthe</h2>
+                <p>Joseph Dean DeBarthe is a passionate writer and researcher dedicated to uncovering the hidden truths of scripture. His work explores the connections between the Bible and the Book of Mormon, bringing fresh perspectives to long-held beliefs. With a deep love for theology, Joseph’s writings aim to enlighten, inspire, and challenge readers on their spiritual journeys.</p>
+            </div>
+            <img src="author.png" alt="Joseph Dean DeBarthe" class="author-image">
         </div>
-        <h1>DeBarthe's Works</h1>
     </section>
-    <section class="author-text">
-        <p>sample text</p>
+
+    <section class="author-bio">
+        <div class="bio-content">
+            <img src="./maria.jpg" alt="Mr. Joseph Dean Debarthe and Ms. Maria" class="bio-image">
+            <div class="bio-text">
+                <h2>Mr. Joseph Dean Debarthe & Ms. Maria</h2>
+                <p>In both life and literature, Mr. Joseph Dean Debarthe has always been guided by passion, dedication, and a deep appreciation for meaningful connections. Standing beside him every step of the way is his loving wife, Ms. Maria, whose unwavering support and grace have been an integral part of his journey. Together, they embody a partnership built on love, resilience, faith, and shared dreams.</p>
+                <p>Their journey is deeply rooted in their belief in God and the teachings, which has been a guiding light in their lives. Through its profound messages of faith, perseverance, and divine purpose, they have found strength in their trials and gratitude in their blessings. They live by its principles, striving to inspire others through their example of kindness, service, and unwavering devotion to God and each other.</p>
+                <p>This beautiful moment captured in the photo reflects not only their elegance but also the depth of their enduring bond. Whether through the written word, their faith, or the countless experiences they have shared, their story is one of inspiration, devotion, and the beauty of companionship.</p>
+                <p>As Mr. Debarthe continues to touch lives through his book "Book of Mormon", his wife remains his greatest source of strength and encouragement. Their journey together is a testament to the power of love, faith, and the incredible things that can be achieved when two hearts move forward as one, guided by the light of the gospel.</p>
+                <p>With every chapter he writes—both in literature and in life—they continue to inspire those around them with their kindness, wisdom, and unwavering commitment to their faith and to one another.</p>
+            </div>
+        </div>
     </section>
-    <script>
-        let angle = 0;
-        function rotateGallery(deg) {
-            angle += deg;
-            document.getElementById("gallery").style.transform = `rotateY(${angle}deg)`;
-        }
-    </script>
+    <footer>
+        <p>&copy; 2025 Joseph Dean DeBarthe. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:">Joseph Dean DeBarthe</a></p>
+        
+        <!-- Social Media Icons -->
+         <div class="social-icons">
+            <p>Follow us on:
+                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </p>
+        </div>
+
+        <div class="seaamos">
+            <h4>Created by Sea Amos - Designer Joseph</h4>
+        </div>
+    </footer>
+    <script src="./styles/scripts.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
