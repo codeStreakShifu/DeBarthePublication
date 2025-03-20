@@ -14,7 +14,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #f8f9fa 40%, #ffde71 100%);
+            background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 100%), url('./book-bg.jpg');   
+            background-size: cover;
+            background-position: center;
         }
         main{
             position: relative;
@@ -23,75 +25,50 @@
 
             
         }
-        header{
-            position: relative;
+        header {
             display: flex;
-            margin: 0;
-            padding: 2rem 10%;
-            background: rgba(116, 98, 76, 0.55);
-            backdrop-filter: blur(3px);
-            max-height: 3rem;
-            max-width: 100vw;
-            font-weight: 500;
-            flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            font-size: max(12px, 1.5vw);
-            flex: 1;
+            padding: 20px 10%;
+            background-color: rgba(92, 46, 3, 0.699);
+            backdrop-filter: blur(3px); /* Blur effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            color: white;
         }
-
-
-        .logo-name{
-            
+        .logo-name {
             font-size: max(18px, 2.8vw);
             font-family: "Homenaje", sans-serif;
-            filter: contrast(180%);
             letter-spacing: 4px;
             font-weight: 1000;
-            color: whitesmoke;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
-               -2px -2px 5px rgba(0, 0, 0, 0.867);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867);
         }
-
-        nav{
-            position: relative;
-        }
-        .logo-image img{
-
-            position: relative;
+        .logo-image img {
             width: 6.4vw;
             height: auto;
         }
-
-        nav ul{
-            position: relative;
+        nav ul {
             display: flex;
             list-style: none;
-            align-items: center;
-            justify-content: space-between;
             gap: 20px;
-            
         }
-        nav li{
-            position: relative;
+        nav li {
             color: whitesmoke;
-            
         }
-
-        nav a:hover{
+        nav a {
+            text-decoration: none;
+            color: rgb(218, 213, 213);
+            padding: 9px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 6px;
+        }
+        nav a:hover {
             color: white;
             background-color: #4d0000;
         }
 
-        ul li a{
-            padding: 9px;
-            text-decoration: none;
-            color: rgb(218, 213, 213);
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.367), 
-               -2px -2px 5px rgba(0, 0, 0, 0.367);
-            transition: all 1s ease-in-out;
-            font-weight: 400; 
-            border-radius: 6px;
+        .active{
+            color: black;
+            background-color: #f3f3f3;
         }
 
         .about-author {
@@ -110,16 +87,16 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
         .author-content {
-            text-align: left;
+            text-align: justify;
             max-width: 50%;
         }
         .author-content h2 {
-            font-size: 36px;
+            font-size: 30px;
             color: #2b200d;
             margin-bottom: 20px;
         }
         .author-content p {
-            font-size: 24px;
+            font-size: 18px;
             color: #555;
             line-height: 1.6;
         }
@@ -139,7 +116,7 @@
         gap: 20px;
     }
     .bio-image {
-        max-width: 40vw;
+        max-width: 50vw;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -147,11 +124,11 @@
         max-width: 60vw;
     }
     .bio-text h2 {
-        font-size: 36px;
+        font-size: 30px;
         color: #333;
     }
     .bio-text p {
-        font-size: 24px;
+        font-size: 18px;
         text-align: justify;
         color: #555;
         line-height: 1.6;
@@ -223,9 +200,10 @@ footer a:hover {
             
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active" data-aos="fade-in" data-aos-duration="2000">Home</a></li>
-                    <li><a href="author.html" data-aos="fade-in" data-aos-duration="2300">About</a></li>
-                    <li><a href="" data-aos="fade-in" data-aos-duration="2500">Books</a></li>
+                    <li><a href="index.html"  data-aos="fade-in" data-aos-duration="2000">Home</a></li>
+                    <li><a href="author.html" class="active" data-aos="fade-in" data-aos-duration="2300">About</a></li>
+                    <li><a href="books.html" data-aos="fade-in" data-aos-duration="2500">Books</a></li>
+                    <li><a href="events.html" >Events</a></li>
                     <li><a href="" data-aos="fade-in" data-aos-duration="2800">Contact</a></li>
                 </ul>
             </nav>
@@ -244,7 +222,7 @@ footer a:hover {
 
     <section class="author-bio">
         <div class="bio-content">
-            <img src="./maria.jpg" alt="Mr. Joseph Dean Debarthe and Ms. Maria" class="bio-image">
+            <img src="./maria.png" alt="Mr. Joseph Dean Debarthe and Ms. Maria" class="bio-image">
             <div class="bio-text">
                 <h2>Mr. Joseph Dean Debarthe & Ms. Maria</h2>
                 <p>In both life and literature, Mr. Joseph Dean Debarthe has always been guided by passion, dedication, and a deep appreciation for meaningful connections. Standing beside him every step of the way is his loving wife, Ms. Maria, whose unwavering support and grace have been an integral part of his journey. Together, they embody a partnership built on love, resilience, faith, and shared dreams.</p>
