@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Joseph Dean DeBarthe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -94,6 +95,8 @@ nav a:hover {
 }
 .social-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 .social-icons a {
@@ -240,7 +243,7 @@ font-size: 14px;
 
 <section class="contact-section">
     <div class="contact-container">
-        <div class="contact-info">
+        <div data-aos="fade-right" data-aos-duration="1500" class="contact-info">
             <h2>Contact Information</h2>
             <p><i class="fas fa-map-marker-alt"></i> Location: Oak Hill Cluster Independence, Missouri</p>
             <h3>Connect With Me</h3>
@@ -250,7 +253,7 @@ font-size: 14px;
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-        <div class="contact-form">
+        <div class="contact-form" data-aos="zoom-in" data-aos-duration="1500">
             <h2>Send a Message</h2>
             <form action="contact-form-handler.php" method="POST">
                 <label for="name">Name</label>
@@ -271,7 +274,7 @@ font-size: 14px;
     </div>
 </section>
 
-<section class="faq-section">
+<section class="faq-section" data-aos="zoom-in" data-aos-duration="1500">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-container">
         <div class="faq-box">
@@ -315,5 +318,8 @@ font-size: 14px;
         <h4>Created by Sea Amos - Designer Joseph</h4>
     </div>
 </footer>
+<script src="./styles/scripts.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
