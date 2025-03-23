@@ -10,64 +10,101 @@
     <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
+
+        html,
         body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
             text-align: center;
-            background-color: #f8f9fa;
+            /* Ensure no horizontal overflow */
         }
+
+
         header {
+            position: relative;
             display: flex;
+            margin: 0;
+            padding: 2rem 0;
+            background-color: #ecf7ff;
+            width: 100vw;
+            font-weight: 500;
+            flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            padding: 20px 10%;
-            background-color: rgba(92, 46, 3, 0.699);
-            backdrop-filter: blur(3px); /* Blur effect */
-            -webkit-backdrop-filter: blur(10px); /* For Safari */
-            color: white;
+            font-family: "Homenaje", sans-serif;
+            justify-content: space-around;
+            font-size: max(14px, 1.5vw);
+            flex: 1;
         }
+
+
         .logo-name {
+
             font-size: max(18px, 2.8vw);
             font-family: "Homenaje", sans-serif;
+            filter: contrast(180%);
             letter-spacing: 4px;
             font-weight: 1000;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867);
+            padding: 10px;
+            color: whitesmoke;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867),
+                -2px -2px 5px rgba(0, 0, 0, 0.867);
         }
+
+        nav {
+            position: relative;
+        }
+
         .logo-image img {
-            width: 6.4vw;
+
+            position: relative;
+            width: 10vw;
             height: auto;
         }
+
         nav ul {
+            position: relative;
             display: flex;
             list-style: none;
-            gap: 20px;
+            align-items: center;
+            max-width: 100vw;
+            justify-content: space-evenly;
+
         }
+
         nav li {
+            position: relative;
+            margin: 10px;
+            height: fit-content;
             color: whitesmoke;
+
         }
-        nav a {
-            text-decoration: none;
-            color: rgb(218, 213, 213);
-            padding: 9px;
-            transition: all 0.3s ease-in-out;
-            border-radius: 6px;
-        }
-        nav a:hover {
+
+        nav a:hover,
+        .active {
             color: white;
             background-color: #4d0000;
         }
 
-        .active{
-            color: black;
-            background-color: #f3f3f3;
+
+
+        ul li a {
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            transition: all 1s ease-in-out;
+            font-weight: 400;
+            border-radius: 6px;
         }
+
         .event-section {
             padding: 60px 10%;
             text-align: center;
-            background: linear-gradient(to right, #ecf7ff 30%, rgba(0,0,0,0) 100%), url('./event-bg.jpg');   
+            background-color: #ecf7ff;
             background-size: cover;
             background-position: center;
             color: #543f1a;
@@ -172,14 +209,35 @@
       font-weight: normal;
       font-size: 14px;
     }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             header {
+                display: flex;
                 flex-direction: column;
+                height: fit-content;
+                position: relative;
+            }
+
+
+            nav ul li {
+                margin-top: 15px;
                 text-align: center;
             }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+
+            nav ul li a {
+                padding: 7px;
+                font-size: 16px;
+                font-weight: 900;
+                text-shadow: none;
+                letter-spacing: 3px;
+            }
+
+            .logo-name {
+                font-size: 7vw;
+            }
+
+            .logo-image img {
+                width: 20vw;
+                height: auto;
             }
             .event-section {
                 padding: 40px 5%;

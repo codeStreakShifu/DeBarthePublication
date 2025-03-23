@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,104 +10,114 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Homenaje&family=Sarpanch:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <title>Joseph Dean DeBarthe</title>
 
     <style>
-        
-        *, html, body{
+        *{
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-
+        }
+        html,
+        body {
+            
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
-        body{
-            
+        body {
+
             letter-spacing: 1.4px;
         }
 
-        main{
+        main {
             position: relative;
             margin: 0;
             max-width: 100vw;
-            height: 100vh;
-            background: linear-gradient(to top, #00000030 50%, rgba(0,0,0,0) 100%),  url('./bg.gif');
+            min-height: 100vh;
+            background: linear-gradient(to top, #00000030 50%, rgba(0, 0, 0, 0) 100%), url('./bg.gif');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
 
-            
+
         }
-        header{
+
+        header {
             position: relative;
             display: flex;
             margin: 0;
-            padding: 2rem 10%;
-            max-height: 3rem;
-            max-width: 100vw;
+            padding: 2rem 0;
+            width: 100vw;
             font-weight: 500;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            font-size: max(12px, 1.5vw);
+            font-family: "Homenaje", sans-serif;
+            justify-content: space-around;
+            font-size: max(14px, 1.5vw);
             flex: 1;
         }
 
 
-        .logo-name{
-            
+        .logo-name {
+
             font-size: max(18px, 2.8vw);
             font-family: "Homenaje", sans-serif;
             filter: contrast(180%);
             letter-spacing: 4px;
             font-weight: 1000;
+            padding: 10px;
             color: whitesmoke;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
-               -2px -2px 5px rgba(0, 0, 0, 0.867);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867),
+                -2px -2px 5px rgba(0, 0, 0, 0.867);
         }
 
-        nav{
+        nav {
             position: relative;
         }
-        .logo-image img{
+
+        .logo-image img {
 
             position: relative;
-            width: 6.4vw;
+            width: 10vw;
             height: auto;
         }
 
-        nav ul{
+        nav ul {
             position: relative;
             display: flex;
             list-style: none;
             align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            
-        }
-        nav li{
-            position: relative;
-            color: whitesmoke;
-            
+            max-width: 100vw;
+            justify-content: space-evenly;
+
         }
 
-        nav a:hover{
+        nav li {
+            position: relative;
+            margin: 10px;
+            height: fit-content;
+            color: whitesmoke;
+
+        }
+
+        nav a:hover, .active {
             color: white;
             background-color: #4d0000;
         }
 
-        .active{
-            color: black;
-            text-shadow: none;
-        }
-        ul li a{
-            padding: 9px;
+         
+
+        ul li a {
+            padding: 10px;
             text-decoration: none;
-            color: rgb(218, 213, 213);
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.867), 
-               -2px -2px 5px rgba(0, 0, 0, 0.867);
+            color: rgb(0, 0, 0);
             transition: all 1s ease-in-out;
-            font-weight: 400; 
+            font-weight: 400;
             border-radius: 6px;
         }
 
@@ -121,25 +132,27 @@
             color: rgb(16, 11, 0);
         } */
 
-        .intro{
-           margin: 0 10%; 
+        .intro {
+            padding: 0 10%;
         }
 
-        .intro .text{
+        .intro .text {
+            padding-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: "Sarpanch", sans-serif;
             font-weight: 700;
             justify-content: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
-               -2px -2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+                -2px -2px 5px rgba(0, 0, 0, 0.2);
+                min-height: fit-content;
             z-index: 1;
-            
+
         }
 
 
-        .text h1{
+        .text h1 {
             margin-top: 100px;
             font-family: "Lavishly Yours", cursive;
             font-weight: 400;
@@ -149,16 +162,16 @@
             font-size: max(24px, 3.5vw);
         }
 
-        .text p{
+        .text p {
 
             font-size: 24px;
             font-family: "Lavishly Yours", cursive;
             margin: 30px 7vw;
-            color:rgb(253, 233, 233);
+            color: rgb(253, 233, 233);
             text-align: justify;
         }
 
-        .text a{
+        .text a {
             text-decoration: none;
             padding: 18px;
             font-size: max(16px, 1.3vw);
@@ -170,17 +183,17 @@
             transition: all 1s ease-in-out;
         }
 
-        .text a:hover{
+        .text a:hover {
             transition: all 1s ease-in-out;
             background-color: rgb(123, 79, 29);
             transform: scale(1.1);
-            
+
         }
 
 
 
-        .about-book{
-            background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 100%), url('./book-bg.jpg');   
+        .about-book {
+            background: linear-gradient(to right, #ecf7ff 20%, rgba(0, 0, 0, 0) 100%), url('./book-bg.jpg');
             background-size: cover;
             background-position: center;
             max-width: 100vw;
@@ -188,16 +201,16 @@
             text-align: center;
         }
 
-        .about-book h2{
+        .about-book h2 {
             font-size: max(16px, 3.3vw);
             font-family: "Bowlby One SC", sans-serif;
             margin-bottom: 30px;
             color: #543f1a;
             filter: contrast(150%);
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.867), 
-               -2px -2px 5px rgba(255, 255, 255, 0.867);
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.867),
+                -2px -2px 5px rgba(255, 255, 255, 0.867);
             transition: all 1s ease-in-out;
-            font-weight: 400; 
+            font-weight: 400;
         }
 
         .content-book {
@@ -213,14 +226,19 @@
             text-align: justify;
         }
 
-        .hero-image img{
+        .hero-image{
+            height: fit-content;
+            padding: 20px 0;
+        }
+
+        .hero-image img {
             width: 80%;
             height: auto;
             margin-bottom: 40px;
         }
 
 
-        .book-button{
+        .book-button {
             text-decoration: none;
             color: #333333;
             padding: 20px;
@@ -230,17 +248,17 @@
             transition: all 1s ease-in-out;
         }
 
-        .book-button:hover{
+        .book-button:hover {
             color: whitesmoke;
             background-color: #4d0000;
             transition: all 1s ease-in-out;
         }
 
-        .about-book-text .title-p{
+        .about-book-text .title-p {
             font-family: "Poppins", sans-serif;
             font-weight: 300;
-            text-shadow: 2px 2px 5px rgba(255, 237, 237, 0.867), 
-               -2px -2px 5px rgba(255, 240, 240, 0.867);
+            text-shadow: 2px 2px 5px rgba(255, 237, 237, 0.867),
+                -2px -2px 5px rgba(255, 240, 240, 0.867);
             font-size: max(16px, 2vw);
             font-style: normal;
         }
@@ -254,141 +272,195 @@
             line-height: 1.2;
         }
 
+        
+
         .about-book p {
             font-size: 20px;
-
             color: #555;
             line-height: 1.6;
             margin: auto;
             text-align: justify;
         }
 
-        .about-author {
+        .about-author{
             background: linear-gradient(to right, #f8f9fa 40%, #ffde71 100%);
             max-width: 100vw;
-            padding: 90px 10%;
+            padding: 50px 10%;
+            height: fit-content;
+        }
+
+        .author-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .author-image-container.mobile{
+            display: none;
+        }
+        .author-image-container img{
+            max-width: 100vw;
+            padding: 30px;
+            height: auto;
+        }
+
+        .author-content{
+            position: relative;
+            align-self: center;
+            max-width: 100vw;
             text-align: center;
         }
 
-        .author-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2vw;
-        }
-
-        .author-image {
-            width: 40vw;
-            height: auto;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .author-content {
-        text-align: left;
-        }
-
-        .author-content h2 {
+        .author-content h2{
             font-family: "Bowlby One SC", sans-serif;
             font-size: 3vw;
             color: #2b200d;
             text-shadow: 2px 2px 5px rgba(228, 228, 228, 0.867), 
                -2px -2px 5px rgba(230, 230, 230, 0.867);
                letter-spacing: 5px;
-               margin-bottom: 70px;
+               margin-bottom: 30px;
         }
-
-
 
         .explore-button {
+            margin-top: 30px;
+            text-decoration: none;
             font-size: 2.2vw;
             padding: 10px 20px;
+            border-radius: 5px;
             background: #7a4333;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
         }
-
-        .explore-button:hover {
-        background: #4d0000;
-        }
-
+        /*  */
         footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-footer p {
-  margin: 8px 0;
-  font-size: 16px;
-}
-
-footer a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  color: #ff9900;
-  text-decoration: underline;
-}
-
-/* Social Media Icons */
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #fff;
-  font-size: 24px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #ffcc00;
-}
-
-/* Creator Section */
-.seaamos {
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.seaamos h4 {
-  font-weight: normal;
-  font-size: 14px;
-}
-
-    @media(max-width: 768px){
-        .about-book
-        .about-book h2{
-            font-size: 36px;
+            max-width: 100vw;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
         }
-        .about-book h1{
+
+        footer p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff9900;
+            text-decoration: underline;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            max-width: 100vw;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
             font-size: 24px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .about-book-text{
-            max-width: 90vw;
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
         }
-        .content-book{
-            display: flex;
-            flex-direction: column;
-        }
-    }
 
+        /* Creator Section */
+        .seaamos {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .seaamos h4 {
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        @media(max-width: 900px) {
+
+            header{
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                position: relative;
+            }
+           
+
+            nav ul li{
+                margin-top: 15px;
+                text-align: center;
+                padding: 0;
+            }
+            nav ul li a{
+                padding: 7px;
+                font-size: 16px;
+                font-weight: 900;
+                text-shadow: none;
+                letter-spacing: 3px;
+            }
+
+            .logo-name{
+                font-size: 7vw;
+            }
+
+            .logo-image img{
+                width: 20vw;
+                height: auto;
+            }
+
+            .intro{
+                padding-top: 50px;
+                align-items: center;
+            }
+
+            .text h1{
+                margin-top: 0;
+            }
+
+
+            .hero-image img{
+                width: 90vw;
+                padding: 20px;
+            }
+            .about-book .about-book h2 {
+                font-size: 36px;
+            }
+
+            .about-book h1 {
+                font-size: 24px;
+            }
+
+            .about-book-text {
+                max-width: 90vw;
+            }
+
+            .content-book {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            
+            .author-content h2{
+                font-size: 20px;
+            }
+           
+        }
     </style>
 </head>
+
 <body>
     <main>
         <header>
@@ -398,13 +470,13 @@ footer a:hover {
             </div>
 
             <div class="logo-name" data-aos="fade-down" data-aos-duration="2000">Joseph Dean DeBarthe</div>
-            
+
             <nav>
                 <ul>
                     <li><a href="index.html" class="active" data-aos="fade-in" data-aos-duration="2000">Home</a></li>
                     <li><a href="author.html" data-aos="fade-in" data-aos-duration="2300">About</a></li>
                     <li><a href="books.html" data-aos="fade-in" data-aos-duration="2500">Books</a></li>
-                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="events.html">Events</a></li>
                     <li><a href="contact.html" data-aos="fade-in" data-aos-duration="2800">Contact</a></li>
                 </ul>
             </nav>
@@ -412,62 +484,75 @@ footer a:hover {
 
         <div class="intro">
             <div class="text">
-                <h1 data-aos="zoom-in" data-aos-duration="1500"><i>GOD LOVES ALL OF US</i></h1>  <p data-aos="zoom-in" data-aos-duration="2500">He wants all of us to join him in heaven, but we must accept His guidance and all of his scripture. This includes the Bible and the Book of Mormon, a second testimony that He is the Mesiah, the son of God.</p>
+                <h1 data-aos="zoom-in" data-aos-duration="1500"><i>GOD LOVES ALL OF US</i></h1>
+                <p data-aos="zoom-in" data-aos-duration="2500">He wants all of us to join him in heaven, but we must
+                    accept His guidance and all of his scripture. This includes the Bible and the Book of Mormon, a
+                    second testimony that He is the Mesiah, the son of God.</p>
                 <!-- <p data-aos="fade-up" data-aos-duration="2000">He wants all of us to join him in heaven, but we must accept His guidance and all of his scripture. This includes the Bible and the Book of Mormon, a second testimony that He is the Mesiah, the son of God.</p> -->
                 <a href="books.html" data-aos="zoom-out" data-aos-duration="2000">Unlock the Truth</a>
             </div>
-            
-            
+
+
         </div>
-        
+
     </main>
-    
+
     <section class="about-book">
         <h2 data-aos="fade-down" data-aos-duration="1000">ABOUT THE BOOK</h2>
         <div class="content-book">
             <div class="about-book-text">
-                <p data-aos="fade-down" data-aos-duration="1500" class="title-p" style="color: #b29564; font-weight: bold;">Best Selling Book</p>
-                <h1 data-aos="fade-right" data-aos-duration="1500">Biblical and Non-Biblical <br>Evidences For The Book of Mormon: That Show Its Validity As Scripture: <br>A Layman's Thesis </h1> <br>
+                <p data-aos="fade-down" data-aos-duration="1500" class="title-p"
+                    style="color: #b29564; font-weight: bold;">Best Selling Book</p>
+                <h1 data-aos="fade-right" data-aos-duration="1500">Biblical and Non-Biblical Evidences For The Book
+                    of Mormon: That Show Its Validity As Scripture: A Layman's Thesis </h1> <br>
                 <p data-aos="fade-left" data-aos-duration="1000">
-                What about the Book of Mormon? That it is a controversial book cannot be denied. Many do not accept it as scripture. 
-                They believe that Joseph Smith, Jr., "wrote" it. They also believe that the Bible is the only scripture ever written, 
-                but nowhere does the Bible make that claim. This belief is not biblical. In fact, just the opposite is true. The Bible 
-                testifies to the existence of other written scriptures and specifically a second scripture written about the tribe of 
-                Joseph (Ezekiel 37:19). This Joseph is the same Joseph of the coat of many colors, the same Joseph sold into slavery in 
-                Egypt, and the same Joseph that saved Egypt and all of the tribes of Israel from the seven-year famine.
+                    What about the Book of Mormon? That it is a controversial book cannot be denied. Many do not accept
+                    it as scripture.
+                    They believe that Joseph Smith, Jr., "wrote" it. They also believe that the Bible is the only
+                    scripture ever written,
+                    but nowhere does the Bible make that claim. This belief is not biblical. In fact, just the opposite
+                    is true. The Bible
+                    testifies to the existence of other written scriptures and specifically a second scripture written
+                    about the tribe of
+                    Joseph (Ezekiel 37:19). This Joseph is the same Joseph of the coat of many colors, the same Joseph
+                    sold into slavery in
+                    Egypt, and the same Joseph that saved Egypt and all of the tribes of Israel from the seven-year
+                    famine.
                 </p>
             </div>
 
             <div data-aos="zoom-in" data-aos-duration="1500" class="hero-image">
                 <img src="./bookcover1.png" alt="Book Cover"> <br>
                 <a href="books.html" class="book-button">Get you copy NOW!</a>
-            </div>  
+            </div>
 
         </div>
-      </section>
-      
+    </section>
 
-      <section class="about-author">
+
+    <section class="about-author">
         <div class="author-container">
-          
+            <div class="author-image-container">
+                <img src="author.png" alt="Author Name" class="author-image" data-aos="zoom-out"
+                    data-aos-duration="2500">
+            </div>
             <div class="author-content">
-                <h2 data-aos="fade-down" data-aos-duration="2000">Discover more about <strong >Joseph Dean DeBarthe</strong></h2>
+                <h2 data-aos="fade-down" data-aos-duration="2000">Discover more about <strong>Joseph Dean
+                        DeBarthe</strong></h2>
                 <a href="author.html" class="explore-button" data-aos="fade-right" data-aos-duration="2000">Discover</a>
             </div>
-            <div class="author-image-container">
-                <img src="author.png" alt="Author Name" class="author-image" data-aos="zoom-out" data-aos-duration="2500">
-            </div>
             
-        </div>
-      </section>
-      
 
-      <footer>
+        </div>
+    </section>
+
+
+    <footer>
         <p>&copy; 2025 Joseph Dean DeBarthe. All rights reserved.</p>
         <p>Contact us at: <a href="mailto:">Joseph Dean DeBarthe</a></p>
-        
+
         <!-- Social Media Icons -->
-         <div class="social-icons">
+        <div class="social-icons">
             <p>Follow us on:
                 <a href="https://www.facebook.com" target="_blank" title="Facebook">
                     <i class="fab fa-facebook"></i>
@@ -490,4 +575,5 @@ footer a:hover {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 </body>
+
 </html>
